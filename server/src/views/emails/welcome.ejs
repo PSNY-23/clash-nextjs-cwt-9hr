@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+  <!-- Header -->
+  <%- include('../partials/header') %>
+
+  <!-- Email Content -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding: 20px 0; background-color: #f8f9fa;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; width: 100%; max-width: 600px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; font-family: Arial, sans-serif; color: #333; padding: 20px;">
+          <!-- Header Section -->
+          <tr>
+            <td style="text-align: center; padding: 20px;">
+              <h2 style="margin: 0; color: #007bff;">Hello, <%= userName || 'User' %>!</h2>
+            </td>
+          </tr>
+  
+          <!-- Main Content Section -->
+          <tr>
+            <td style="font-size: 16px; line-height: 1.6; padding: 10px 0;">
+              <p>We’re thrilled to have you as part of our community at <b><%= companyName || 'MyWebsite' %></b>. Here's a quick summary of what you can expect:</p>
+              <ul style="list-style: none; padding: 0; margin: 10px 0;">
+                <li style="margin-bottom: 8px;">✅ Access to exclusive resources and updates</li>
+                <li style="margin-bottom: 8px;">✅ Invitations to upcoming events and webinars</li>
+                <li style="margin-bottom: 8px;">✅ 24/7 support to assist you whenever needed</li>
+              </ul>
+              <p>If you have any questions or need assistance, don't hesitate to reach out to us. We're here to help!</p>
+            </td>
+          </tr>
+  
+          <!-- Call-to-Action Section -->
+          <tr>
+            <td style="text-align: center; padding: 20px;">
+              <a href="<%= actionUrl || '#' %>" style="display: inline-block; background-color: #007bff; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold;">Get Started</a>
+            </td>
+          </tr>
+  
+          <!-- Footer Section -->
+          <tr>
+            <td style="font-size: 12px; color: #777; text-align: center; padding: 10px 0;">
+              <p style="margin: 0;">You’re receiving this email because you signed up for <b><%= companyName || 'MyWebsite' %></b>.</p>
+              <p style="margin: 0;">If you’d like to stop receiving emails, you can <a href="<%= unsubscribeUrl || '#' %>" style="color: #007bff; text-decoration: none;">unsubscribe here</a>.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  
+
+  <!-- Footer -->
+  <%- include('../partials/footer') %>
+
+</body>
+</html>
