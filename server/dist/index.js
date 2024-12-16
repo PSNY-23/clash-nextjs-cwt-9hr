@@ -16,6 +16,7 @@ const express_1 = __importDefault(require("express"));
 require("dotenv/config");
 const path_1 = __importDefault(require("path"));
 const ejs_1 = __importDefault(require("ejs"));
+const index_1 = __importDefault(require("./routes/index"));
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 7000;
 app.use(express_1.default.json());
@@ -29,6 +30,7 @@ const data = {
     actionUrl: "https://mywebsite.com/start", // URL for the CTA button
     unsubscribeUrl: "https://mywebsite.com/unsubscribe", // Unsubscribe URL
 };
+app.use(index_1.default);
 app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         // Define the data object to be used in the EJS template

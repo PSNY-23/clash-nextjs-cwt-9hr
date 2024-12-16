@@ -1,8 +1,9 @@
-import express, { Application, Request, Response, urlencoded } from "express";
+import express, { Application, Request, Response} from "express";
 import "dotenv/config";
 import path from "path";
 import ejs from "ejs";
 import { sendEmail } from "./config/mail";
+import Routes from "./routes/index"
 
 const app: Application = express();
 const PORT = process.env.PORT || 7000;
@@ -20,6 +21,8 @@ const data = {
   actionUrl: "https://mywebsite.com/start", // URL for the CTA button
   unsubscribeUrl: "https://mywebsite.com/unsubscribe", // Unsubscribe URL
 };
+
+app.use(Routes)
 
 app.get("/", async (req: Request, res: Response) => {
   try {
@@ -61,5 +64,6 @@ app.get("/", async (req: Request, res: Response) => {
 //Queue:
 import "./jobs/index";
 import { emailQueue, emailQueueName } from "./jobs/EmailJob";
+import router from "./routes";
 
 app.listen(PORT, () => console.log(`server is runnig on ${PORT}`));
