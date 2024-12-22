@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Inline styles inspired by TailwindCSS */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background-color: #ef4444; /* Error Red */
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+      }
+      .header h1 {
+        font-size: 24px;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .content {
+        padding: 20px;
+        line-height: 1.8;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #1e40af; /* Blue Button */
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .btn:hover {
+        background-color: #1b3a96;
+      }
+      .divider {
+        margin: 20px 0;
+        border-top: 1px solid #e5e7eb;
+      }
+      .footer {
+        background-color: #f9fafb;
+        color: #6b7280;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px;
+      }
+      .footer a {
+        color: #1e40af;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <div class="header">
+        <h1>Email Verification Failed</h1>
+        <p style="margin: 0; font-size: 14px;">We couldn't verify your email</p>
+      </div>
+
+      <!-- Content Section -->
+      <div class="content">
+        <p>
+          Unfortunately, we were unable to verify your email address. This could happen due to an expired or invalid verification link.
+        </p>
+        <p>
+          Please click the button below to request a new verification email:
+        </p>
+        <p>
+          If the button above doesn't work, copy and paste the following link into your browser:
+        </p>
+        <p style="word-wrap: break-word; color: #1e40af;">
+        </p>
+        <div class="divider"></div>
+        <p>
+          If you continue to face issues, please contact our support team for assistance.
+        </p>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="footer">
+        <p>
+          Need help? Contact our <a href="https://yourcompany.com/support">Support Team</a>.
+        </p>
+        <p>
+          &copy; <%= new Date().getFullYear() %> Your Company. All rights reserved.
+        </p>
+        <p>
+          <a href="https://yourcompany.com/privacy-policy">Privacy Policy</a> | 
+          <a href="https://yourcompany.com/terms">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

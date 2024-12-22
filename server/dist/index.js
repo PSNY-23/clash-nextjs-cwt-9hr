@@ -24,12 +24,6 @@ app.use(express_1.default.urlencoded({ extended: true }));
 // Set VIEW engine
 app.set("view engine", "ejs");
 app.set("views", path_1.default.resolve(__dirname, "./views"));
-const data = {
-    userName: "John Doe",
-    companyName: "MyWebsite", // Company name
-    actionUrl: "https://mywebsite.com/start", // URL for the CTA button
-    unsubscribeUrl: "https://mywebsite.com/unsubscribe", // Unsubscribe URL
-};
 app.use(index_1.default);
 app.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {

@@ -2,7 +2,6 @@ import express, { Application, Request, Response} from "express";
 import "dotenv/config";
 import path from "path";
 import ejs from "ejs";
-import { sendEmail } from "./config/mail";
 import Routes from "./routes/index"
 
 const app: Application = express();
@@ -15,12 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "./views"));
 
-const data = {
-  userName: "John Doe",
-  companyName: "MyWebsite", // Company name
-  actionUrl: "https://mywebsite.com/start", // URL for the CTA button
-  unsubscribeUrl: "https://mywebsite.com/unsubscribe", // Unsubscribe URL
-};
+
 
 app.use(Routes)
 

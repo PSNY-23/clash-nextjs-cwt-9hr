@@ -19,6 +19,7 @@
   "dependencies": {
     "@prisma/client": "^6.0.1",
     "@types/ejs": "^3.1.5",
+    "bcrypt": "^5.1.1",
     "bullmq": "^5.34.2",
     "copyfiles": "^2.4.1",
     "cors": "^2.8.5",
@@ -27,12 +28,15 @@
     "express": "^4.21.2",
     "nodemailer": "^6.9.16",
     "prisma": "^6.0.1",
+    "uuid": "^11.0.3",
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/nodemailer": "^6.4.17",
+    "@types/uuid": "^10.0.0",
     "concurrently": "^9.1.0",
     "copyfile": "^0.1.2",
     "typescript": "^5.7.2"
